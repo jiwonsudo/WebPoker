@@ -9,6 +9,7 @@ const allCards = [
 ];
 
 let thisCards = [];
+let communityCards = [];
 
 // about players
 const players = ['playerMe', 'platerLeft', 'playerFront', 'playerRight'];
@@ -93,27 +94,39 @@ function dealPreFlop() {
     playerRight.cards.push(pickRandomCard());
   }
 
-  //TODO write code to visualize picked cards on HTML.
+  //TODO write code to visualize each player's picked cards on HTML.
 
 }
 
 function dealFlop() {
+  for (let i = 0; i < 3; i++) {
+    communityCards.push(pickRandomCard());
+  }
+  
+  //TODO write code to visualize picked community cards on HTML.
 
 }
 
-function dealTurn() {
+function dealTurnOrRiver() {
+  communityCards.push(pickRandomCard());
+
+  //TODO write code to visualize picked community cards on HTML.
 
 }
 
-function dealRiver() {
-
-}
-
-function betMoney() {
+function betting() {
 
 }
 
 function checkRanksOfHands() {
+
+}
+
+function betMoney() {
+  
+}
+
+function estimateWinningRate() {
 
 }
 
@@ -144,10 +157,3 @@ function pickRandomCard() {
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
-
-dealPreFlop();
-console.log(playerMe.cards);
-console.log(playerLeft.cards);
-console.log(playerRight.cards);
-console.log(playerFront.cards);
-console.log(thisCards);
